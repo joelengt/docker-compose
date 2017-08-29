@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  dev:
+    build:
+      context: ../..
+      dockerfile: .docker/dev/Dockerfile
+    ports:
+      - 4444:3000
+    hostname: gateway
+    restart: always
+
+  app1:
+    image: joelengt/nodejs-mvc
+    ports:
+      - 4445:5000
+    hostname: app1
+    restart: always
+

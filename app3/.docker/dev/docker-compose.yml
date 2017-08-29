@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  dev:
+    build:
+      context: ../..
+      dockerfile: .docker/dev/Dockerfile
+    ports:
+      - 4447:3000
+    hostname: service-app3
+    restart: always
